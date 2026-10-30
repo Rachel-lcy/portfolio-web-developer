@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rachel Hu | Web Developer</title>
+  <meta name="description" content="Rachel Hu — Calgary-based web developer and SAIT Web Design & Development graduate. Projects built with React, Next.js, and Node.js." />
+
+  <!-- Open Graph: how the link looks when shared on LinkedIn -->
+  <meta property="og:title" content="Rachel Hu | Web Developer" />
+  <meta property="og:description" content="Calgary-based web developer building responsive websites and web apps with React and Next.js." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="./assets/rachel-1.png" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ==================== Navigation ==================== -->
+  <header class="site-header">
+    <!-- Desktop -->
+    <nav id="desktop-nav" aria-label="Main">
+      <a class="logo" href="#profile">Rachel Hu</a>
+      <ul class="nav-links">
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- Mobile -->
+    <nav id="hamburger-nav" aria-label="Main">
+      <div class="hamburger-bar">
+        <a class="logo" href="#profile">Rachel Hu</a>
+        <button id="nav-toggle" class="hamburger-icon" type="button"
+                aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+
+      <ul id="mobile-menu" class="menu-links" data-state="closed" aria-hidden="true">
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <!-- ==================== Hero ==================== -->
+    <section id="profile" class="section hero">
+      <div class="container hero-grid">
+        <div class="hero-pic">
+          <img src="./assets/rachel-1.png" alt="Portrait of Rachel Hu" width="360" height="360" />
+        </div>
+
+        <div class="hero-text">
+          <p class="eyebrow">Hello, I'm</p>
+          <h1 class="hero-name">Rachel Hu</h1>
+          <p class="hero-role">Web Developer</p>
+
+          <p class="hero-summary">
+            I build responsive websites and web apps with React and Next.js —
+            from page layouts and interactive components to API integrations.
+          </p>
+          <p class="hero-summary">
+            I'm a SAIT Web Design &amp; Development graduate based in Calgary,
+            looking for my first professional web development role.
+          </p>
+
+          <div class="btn-container">
+            <a class="btn btn-color-1" href="#projects">View My Projects</a>
+            <!-- Tip: rename the PDF to something without spaces, e.g. Rachel-Hu-Resume.pdf, and update this href -->
+            <a class="btn btn-color-2" data-resume-link
+               href="./assets/RACHEL_HU_Resume_Design%20Version%20copy.pdf"
+               target="_blank" rel="noopener noreferrer">Download Resume</a>
+          </div>
+
+          <div class="social-row">
+            <a class="social-icon" href="https://www.linkedin.com/in/rachelhu3/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">
+              <img src="./assets/linkedin.png" alt="" />
+            </a>
+            <a class="social-icon" href="https://github.com/Rachel-lcy" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile">
+              <img src="./assets/github.png" alt="" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== Projects ==================== -->
+    <section id="projects" class="section">
+      <div class="container">
+        <p class="eyebrow">Selected Work</p>
+        <h2 class="title">Projects</h2>
+        <p class="section-intro">
+          A selection of my web development projects — what each one does,
+          what I built, and the challenges I worked through.
+        </p>
+
+        <div class="projects-container">
+
+          <!-- AI Resume Analyzer -->
+          <article class="project-card">
+            <img class="project-img" src="./assets/AI Resume Analyzer.png"
+                 alt="AI Resume Analyzer results page showing match scores and skill comparison" loading="lazy" />
+
+            <div class="project-body">
+              <h3>AI Resume Analyzer</h3>
+              <p class="project-meta">Personal project · Designed and built solo</p>
+
+              <p class="project-description">
+                A web app that compares a resume PDF with a job description and shows
+                match scores, matched and missing skills, and AI-generated suggestions.
+              </p>
+
+              <ul class="project-highlights">
+                <li>Built the resume upload form and a results page that displays scores and skill comparisons</li>
+                <li>Wrote server-side API routes that extract text from the PDF and send it, with the job description, to an AI model on Amazon Bedrock</li>
+                <li>Kept AWS credentials on the server in environment variables, so no keys are exposed in the browser</li>
+              </ul>
+
+              <p class="tech-stack"><b>Tools:</b> Next.js · React · Tailwind CSS · Amazon Bedrock · pdfjs-dist · Vercel</p>
+            </div>
+
+            <div class="project-actions">
+              <div class="btn-row">
+                <a class="btn btn-color-1" href="https://ai-resume-analyser-one-liart.vercel.app/" target="_blank" rel="noopener noreferrer">Live Demo</a>
+                <!-- TODO: replace with the AI Resume Analyzer repository URL before publishing -->
+                <a class="btn btn-color-2" href="https://github.com/Rachel-lcy" target="_blank" rel="noopener noreferrer">GitHub</a>
+              </div>
+              <a class="detail-link" href="business-ai.html">Project Details <span aria-hidden="true">→</span></a>
+            </div>
+          </article>
+
+          <!-- Peak Pets -->
+          <article class="project-card">
+            <img class="project-img" src="./assets/peakpets.png"
+                 alt="Peak Pets website home page" loading="lazy" />
+
+            <div class="project-body">
+              <h3>Peak Pets</h3>
+              <p class="project-meta">Personal project · Designed and built solo</p>
+
+              <p class="project-description">
+                A pet-sitting business website with CMS-managed service content and user sign-in.
+              </p>
+
+              <ul class="project-highlights">
+                <li>Built responsive service pages from reusable components that work on phone and desktop</li>
+                <li>Connected the site to Contentful so service content can be updated without changing code</li>
+                <li>Added user sign-in with Clerk</li>
+                <!-- TODO (optional): if signed-in users can do something specific (book, manage an account), describe it in the line above -->
+              </ul>
+
+              <p class="tech-stack"><b>Tools:</b> Next.js · React · Tailwind CSS · Contentful · Clerk · Vercel</p>
+            </div>
+
+            <div class="project-actions">
+              <div class="btn-row">
+                <a class="btn btn-color-1" href="https://pets-website-steel.vercel.app/" target="_blank" rel="noopener noreferrer">Live Demo</a>
+                <a class="btn btn-color-2" href="https://github.com/Rachel-lcy/pets-website" target="_blank" rel="noopener noreferrer">GitHub</a>
+              </div>
+              <a class="detail-link" href="business-peakpets.html">Project Details <span aria-hidden="true">→</span></a>
+            </div>
+          </article>
+
+          <!-- Skills Tune Up -->
+          <article class="project-card">
+            <img class="project-img" src="./assets/skills-tune-up.png"
+                 alt="Skills Tune Up course search page" loading="lazy" />
+
+            <div class="project-body">
+              <h3>Skills Tune Up</h3>
+              <!-- TODO: name the part you built, e.g. "Team project · Built the course pages and checkout" -->
+              <p class="project-meta">Team project · Web developer</p>
+
+              <p class="project-description">
+                A training website that helps learners browse security guard training courses in Alberta.
+              </p>
+
+              <ul class="project-highlights">
+                <li>Built course listing and detail pages that let learners compare training options</li>
+                <li>Organized shared interface elements into reusable components</li>
+                <!-- TODO: add one completed feature that uses Stripe or Supabase, e.g. "Set up course checkout with Stripe in test mode" -->
+              </ul>
+
+              <p class="tech-stack"><b>Tools:</b> Next.js · React · Tailwind CSS · Stripe · Supabase</p>
+            </div>
+
+            <div class="project-actions">
+              <div class="btn-row">
+                <a class="btn btn-color-1" href="https://skills-tune-up-project.vercel.app/" target="_blank" rel="noopener noreferrer">Live Demo</a>
+                <a class="btn btn-color-2" href="https://github.com/Rachel-lcy/skills-tune-up-project" target="_blank" rel="noopener noreferrer">GitHub</a>
+              </div>
+              <a class="detail-link" href="business-skillsTuneUp.html">Project Details <span aria-hidden="true">→</span></a>
+            </div>
+          </article>
+
+          <!-- Latinos Bakery -->
+          <article class="project-card">
+            <img class="project-img" src="./assets/latinos-bakery.png"
+                 alt="Latinos Bakery website home page" loading="lazy" />
+
+            <div class="project-body">
+              <h3>Latinos Bakery</h3>
+              <!-- TODO: name the part you built -->
+              <p class="project-meta">Team project · Web developer</p>
+
+              <p class="project-description">
+                A website for a bakery and restaurant that presents the business, its food, and its menu.
+              </p>
+
+              <ul class="project-highlights">
+                <li>Built a mobile-first menu layout so customers can browse easily on their phones</li>
+                <li>Loaded menu content from a CMS through its API</li>
+                <!-- TODO: add one completed feature that uses Stripe or Supabase (say "in test mode" if applicable) -->
+              </ul>
+
+              <p class="tech-stack"><b>Tools:</b> Next.js · React · Tailwind CSS · CMS · Stripe · Supabase</p>
+            </div>
+
+            <div class="project-actions">
+              <div class="btn-row">
+                <a class="btn btn-color-1" href="https://latinos-bakery-app.vercel.app/" target="_blank" rel="noopener noreferrer">Live Demo</a>
+                <a class="btn btn-color-2" href="https://github.com/Rachel-lcy/latinos-bakery-app" target="_blank" rel="noopener noreferrer">GitHub</a>
+              </div>
+              <a class="detail-link" href="business-latinos-bakery.html">Project Details <span aria-hidden="true">→</span></a>
+            </div>
+          </article>
+
+          <!-- Floatin (shown after "View More Projects") -->
+          <article class="project-card hidden-project">
+            <img class="project-img" src="./assets/floatin-application.png"
+                 alt="Floatin social app home screen" loading="lazy" />
+
+            <div class="project-body">
+              <h3>Floatin</h3>
+              <!-- TODO: name the part you built -->
+              <p class="project-meta">Team project · Web developer</p>
+
+              <p class="project-description">
+                A responsive social app concept built with HTML, CSS, and JavaScript.
+                <!-- TODO: add what users can do in the app -->
+              </p>
+
+              <ul class="project-highlights">
+                <li>Built responsive pages that adapt to phone and desktop</li>
+                <li>Added sign-up and sign-in with Clerk</li>
+                <li>Managed page content with Builder.io</li>
+              </ul>
+
+              <p class="tech-stack"><b>Tools:</b> HTML · CSS · JavaScript · Clerk · Builder.io · Vercel</p>
+            </div>
+
+            <div class="project-actions">
+              <div class="btn-row">
+                <a class="btn btn-color-1" href="https://floatin-social-app.vercel.app/" target="_blank" rel="noopener noreferrer">Live Demo</a>
+                <a class="btn btn-color-2" href="https://github.com/Rachel-lcy/floatin-social-app" target="_blank" rel="noopener noreferrer">GitHub</a>
+              </div>
+              <a class="detail-link" href="business-floatin-app.html">Project Details <span aria-hidden="true">→</span></a>
+            </div>
+          </article>
+
+          <div class="load-more-container">
+            <button id="load-more-btn" type="button">View More Projects <span aria-hidden="true">→</span></button>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== Skills ==================== -->
+    <section id="skills" class="section section--tinted">
+      <div class="container">
+        <p class="eyebrow">What I Work With</p>
+        <h2 class="title">Technical Skills</h2>
+
+        <div class="skills__grid">
+
+          <div class="skills__card">
+            <h3 class="skills__card-title">Front-End</h3>
+            <p class="skills__card-desc">Building responsive layouts and interactive interfaces, from Figma designs to working code.</p>
+            <ul class="skills__list">
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>JavaScript</li>
+              <li>React.js</li>
+              <li>Next.js</li>
+              <li>Tailwind CSS</li>
+              <li>Figma</li>
+            </ul>
+          </div>
+
+          <div class="skills__card">
+            <h3 class="skills__card-title">Back-End &amp; Integrations</h3>
+            <p class="skills__card-desc">Building server-side features and connecting web apps to databases, content, sign-in, and payment services.</p>
+            <ul class="skills__list">
+              <li>Node.js</li>
+              <li>Express.js</li>
+              <li>REST APIs</li>
+              <li>Next.js API Routes</li>
+              <li>PostgreSQL</li>
+              <li>Supabase</li>
+              <li>MongoDB</li>
+              <li>Contentful</li>
+              <li>Clerk</li>
+              <li>Stripe</li>
+              <li>Amazon Bedrock</li>
+            </ul>
+          </div>
+
+          <div class="skills__card">
+            <h3 class="skills__card-title">Tools &amp; Workflow</h3>
+            <p class="skills__card-desc">Managing code changes and deploying projects to the web.</p>
+            <ul class="skills__list">
+              <li>Git</li>
+              <li>GitHub</li>
+              <li>Vercel</li>
+              <li>VS Code</li>
+            </ul>
+          </div>
+
+          <div class="skills__card">
+            <h3 class="skills__card-title">Certifications &amp; Training</h3>
+            <p class="skills__card-desc">Structured learning alongside my diploma and projects.</p>
+            <ul class="skills__certs">
+              <li class="skills__cert">
+                <div>
+                  <span class="skills__cert-name">Front-End Developer Professional Certificate</span>
+                  <span class="skills__cert-issuer">Meta · Coursera</span>
+                </div>
+                <a class="skills__cert-link" href="https://www.coursera.org/account/accomplishments/professional-cert/certificate/O0OH2EWQPQGY" target="_blank" rel="noopener noreferrer" aria-label="Verify Meta Front-End Developer certificate">Verify</a>
+              </li>
+              <li class="skills__cert">
+                <div>
+                  <span class="skills__cert-name">AWS Certified AI Practitioner</span>
+                  <span class="skills__cert-issuer">Amazon Web Services</span>
+                </div>
+                <a class="skills__cert-link" href="https://www.credly.com/badges/ff0a9cdf-2a8b-4a9e-b2cf-f72f44af94e7/linked_in_profile" target="_blank" rel="noopener noreferrer" aria-label="Verify AWS Certified AI Practitioner">Verify</a>
+              </li>
+              <li class="skills__cert">
+                <div>
+                  <span class="skills__cert-name">AWS Certified Cloud Practitioner</span>
+                  <span class="skills__cert-issuer">Amazon Web Services</span>
+                </div>
+                <a class="skills__cert-link" href="https://www.credly.com/badges/0fe5765e-6ab7-49e1-a218-37831a4bdf38/linked_in_profile" target="_blank" rel="noopener noreferrer" aria-label="Verify AWS Certified Cloud Practitioner">Verify</a>
+              </li>
+              <li class="skills__cert">
+                <div>
+                  <span class="skills__cert-name">Python for Everybody</span>
+                  <span class="skills__cert-issuer">University of Michigan · Coursera</span>
+                </div>
+                <a class="skills__cert-link" href="https://www.coursera.org/account/accomplishments/specialization/certificate/7QNU9B3IWSDO" target="_blank" rel="noopener noreferrer" aria-label="Verify Python for Everybody certificate">Verify</a>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+
+        <div class="skills__support">
+          <h3 class="skills__support-title">IT Support Foundation</h3>
+          <p class="skills__support-text">Home lab practice with Windows, Microsoft 365, Active Directory, Entra ID, and PowerShell, plus volunteer tech mentoring for older adults.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== About ==================== -->
+    <section id="about" class="section">
+      <div class="container">
+        <p class="eyebrow">Get to Know Me</p>
+        <h2 class="title">About Me</h2>
+
+        <div class="about-layout">
+          <div class="about-cards">
+            <div class="details-container">
+              <img src="./assets/experience.png" alt="" class="details-icon" />
+              <h3>Focus</h3>
+              <p>Front-end development — responsive layouts, interactive interfaces, and the APIs and data behind them.</p>
+            </div>
+
+            <div class="details-container">
+              <img src="./assets/education.png" alt="" class="details-icon" />
+              <h3>Education</h3>
+              <p>SAIT — Interactive Design, Web Design &amp; Development<br />Diploma · 2025</p>
+            </div>
+          </div>
+
+          <div class="about-text">
+            <p>
+              I'm a Calgary-based web developer and a 2025 graduate of SAIT's Interactive Design —
+              Web Design &amp; Development program. Through coursework and personal projects, I've
+              built web apps with user sign-in, payments, content management, and an AI-powered
+              resume analyzer. I enjoy turning an idea into a working interface and tracking down
+              what's wrong when something breaks.
+            </p>
+            <p>
+              Before SAIT, I spent four years in product and operations in China, working with
+              customer feedback, website requirements, and teams across the business. It taught me
+              to ask questions, clarify requirements, and keep the people using a product in mind.
+            </p>
+            <p>
+              I also practise IT support in a home lab and volunteer as a tech mentor for older
+              adults, which helps me troubleshoot patiently and explain technical steps clearly.
+              I'm bilingual in English and Mandarin, and I'm looking for a team where I can
+              contribute, learn from experienced developers, and keep growing.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== Contact ==================== -->
+    <section id="contact" class="section section--tinted">
+      <div class="container">
+        <p class="eyebrow">Get in Touch</p>
+        <h2 class="title">Contact Me</h2>
+        <!-- TODO: add "or remote" if you're open to remote roles -->
+        <p class="section-intro">
+          I'm open to junior web development roles in Calgary.
+          If you'd like to talk about a role or my projects, I'd love to hear from you.
+        </p>
+
+        <div class="contact-container">
+
+          <div class="contact-info">
+            <a class="contact-item" href="mailto:hurui.lcy@gmail.com">
+              <img src="./assets/email.png" class="contact-icon" alt="" />
+              <span class="contact-text">
+                <span class="contact-label">Email</span>
+                <span class="contact-value">hurui.lcy@gmail.com</span>
+              </span>
+            </a>
+
+            <a class="contact-item" href="https://www.linkedin.com/in/rachelhu3/" target="_blank" rel="noopener noreferrer">
+              <img src="./assets/linkedin.png" class="contact-icon" alt="" />
+              <span class="contact-text">
+                <span class="contact-label">LinkedIn</span>
+                <span class="contact-value">linkedin.com/in/rachelhu3</span>
+              </span>
+            </a>
+
+            <a class="contact-item" href="https://github.com/Rachel-lcy" target="_blank" rel="noopener noreferrer">
+              <img src="./assets/github.png" class="contact-icon" alt="" />
+              <span class="contact-text">
+                <span class="contact-label">GitHub</span>
+                <span class="contact-value">github.com/Rachel-lcy</span>
+              </span>
+            </a>
+
+            <p class="contact-location">Based in Calgary, Alberta</p>
+          </div>
+
+          <!-- TODO: replace YOUR_FORM_ID with your Formspree form ID -->
+          <form id="contact-form" class="contact-form"
+                action="https://formspree.io/f/YOUR_FORM_ID" method="POST" novalidate>
+            <h3 class="contact-form__title">Send a Message</h3>
+
+            <div class="form-field">
+              <label for="contact-name">Name</label>
+              <input id="contact-name" name="name" type="text" autocomplete="name"
+                     placeholder="Your name" required aria-describedby="contact-name-error" />
+              <p id="contact-name-error" class="form-error"></p>
+            </div>
+
+            <div class="form-field">
+              <label for="contact-email">Email</label>
+              <input id="contact-email" name="email" type="email" autocomplete="email"
+                     placeholder="Your email address" required aria-describedby="contact-email-error" />
+              <p id="contact-email-error" class="form-error"></p>
+            </div>
+
+            <div class="form-field">
+              <label for="contact-message">Message</label>
+              <textarea id="contact-message" name="message" rows="5"
+                        placeholder="Tell me about the opportunity or your question."
+                        required aria-describedby="contact-message-error"></textarea>
+              <p id="contact-message-error" class="form-error"></p>
+            </div>
+
+            <!-- Spam trap: hidden from people, bots fill it in -->
+            <input type="text" name="_gotcha" class="form-honeypot" tabindex="-1" autocomplete="off" aria-hidden="true" />
+
+            <button type="submit" class="btn btn-color-1 contact-submit">Send Message</button>
+            <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
+          </form>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==================== Voice Navigation (collapsed by default) ==================== -->
+  <div id="voice-widget" class="voice-widget">
+    <div id="voice-panel" class="voice-panel" hidden>
+      <div class="voice-panel__header">
+        <h2 class="voice-panel__title">Voice Navigation</h2>
+        <button id="voice-close" class="voice-close" type="button" aria-label="Close voice navigation">×</button>
+      </div>
+      <p class="voice-panel__hint">Say "projects", "skills", "about", "contact", or "resume".</p>
+      <button id="voice-listen" class="voice-listen" type="button">Start Listening</button>
+      <p id="voice-status" class="voice-status" role="status" aria-live="polite"></p>
+    </div>
+
+    <button id="voice-toggle" class="voice-toggle" type="button"
+            aria-expanded="false" aria-controls="voice-panel">
+      <span aria-hidden="true">🎙️</span> Voice
+    </button>
+  </div>
+
+  <!-- ==================== Footer ==================== -->
+  <footer class="site-footer">
+    <p class="footer-copy">© <span id="year">2026</span> Rachel Hu</p>
+    <nav class="footer-links" aria-label="Footer">
+      <a href="https://github.com/Rachel-lcy" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <span aria-hidden="true">·</span>
+      <a href="https://www.linkedin.com/in/rachelhu3/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <span aria-hidden="true">·</span>
+      <a href="mailto:hurui.lcy@gmail.com">Email</a>
+    </nav>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
