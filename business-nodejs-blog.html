@@ -1,0 +1,153 @@
+<!-- business-nodejs-blog.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Node.js Blog – Project Details</title>
+  <link rel="stylesheet" href="insights.css">
+</head>
+<body>
+  <div class="body-div">
+
+    <!-- Replace with your own screenshots -->
+    <div class="img-div">
+      <img src="assets/blog-hero.png" alt="Node.js Blog home page with latest posts list">
+      <!-- <img src="assets/nodejs-blog-post.png" alt="Single blog post page">
+      <img src="assets/nodejs-blog-search.png" alt="Search results page"> -->
+    </div>
+
+    <div class="content-container">
+
+      <h1>✨ Node.js Blog – Project Details</h1>
+
+      <h2>Project Overview</h2>
+      <p>
+        Node.js Blog is a server-rendered blog website built with Node.js, Express, and MongoDB.
+        Posts are stored in a cloud database and rendered into pages on the server, with search and
+        pagination so readers can find and browse articles easily. I built it to learn how a back-end
+        web app works end to end: handling requests, reading and writing data, rendering pages, and
+        deploying to a live server.
+      </p>
+      <!-- If you followed a tutorial, add one honest line here, for example:
+           "I started from a Node.js blog tutorial, then customized and extended it." -->
+
+      <div class="audience-section">
+        <h2>Who It's For</h2>
+        <ul>
+          <li>Readers who want to browse and search short articles about web development</li>
+          <li>The site owner, who needs posts stored in one place and shown automatically, without editing HTML by hand</li>
+          <li>Me as a learner: a hands-on way to practise back-end development beyond front-end frameworks</li>
+        </ul>
+        <!-- Replace with your own screenshots (desktop + mobile views work well) -->
+        <div class="audience-pic">
+          <img src="assets/blog1.avif" alt="Blog shown on a desktop screen">
+          <img src="assets/blog2.jpg" alt="Blog shown on a phone screen">
+          <img src="assets/blog3.jpg" alt="Pagination at the bottom of the posts list">
+        </div>
+      </div>
+
+      <h2>Tech Stack</h2>
+      <p>
+        Node.js, Express.js, MongoDB Atlas, Mongoose, EJS templates, CSS, Render (hosting), GitHub
+      </p>
+
+      <h2>The Problem</h2>
+      <p>My earlier projects were mostly front-end. I wanted to understand what happens on the server side:</p>
+      <ul>
+        <li>How a server receives a request and decides which page to send back</li>
+        <li>How data is stored in a database and read back into a page</li>
+        <li>How to keep secrets like database passwords out of public code</li>
+        <li>How to deploy a full app, not just static files, to a live server</li>
+      </ul>
+
+      <div class="help-container">
+        <h2>How the Project Solves These Problems</h2>
+        <div class="help-center">
+
+          <div class="help-card">
+            <div class="help-grid">
+              <h4>Express Routing (MVC)</h4>
+              <p>- Routes, Mongoose models, and EJS views are kept in separate folders, so each part of the app has one clear job.</p>
+            </div>
+          </div>
+
+          <div class="help-card">
+            <div class="help-grid">
+              <h4>MongoDB + Mongoose</h4>
+              <p>- Blog posts are stored in MongoDB Atlas. A Mongoose schema defines each post's title, body, and created date.</p>
+            </div>
+          </div>
+
+          <div class="help-card">
+            <div class="help-grid">
+              <h4>Server-Rendered Pages</h4>
+              <p>- EJS templates with shared partials for the header and footer turn database records into full HTML pages.</p>
+            </div>
+          </div>
+
+          <div class="help-card">
+            <div class="help-grid">
+              <h4>Search & Pagination</h4>
+              <p>- Readers can search posts by keyword, and the home page loads a few posts at a time, newest first.</p>
+            </div>
+          </div>
+
+          <div class="help-card">
+            <div class="help-grid">
+              <h4>Safe Configuration</h4>
+              <p>- The database connection string lives in environment variables, kept out of the public GitHub repository.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <h2>Key Features</h2>
+      <ul>
+        <li>Home page listing the latest posts with publish dates</li>
+        <li>Individual post pages generated from database records</li>
+        <li>Keyword search across posts</li>
+        <li>Pagination for browsing older posts</li>
+        <li>Responsive layout that works on phone and desktop</li>
+        <!-- Only add this if your app has it:
+        <li>Admin dashboard to sign in and create, edit, and delete posts</li>
+        -->
+      </ul>
+
+      <h2>Technical Insights</h2>
+      <ul>
+        <li><strong>Debugging a failed deployment:</strong> After months without use, the app failed to deploy on Render with a <code>querySrv ENOTFOUND</code> error. The build had succeeded, so I focused on the database connection.</li>
+        <li><strong>Ruling out the code:</strong> I tested the same connection in MongoDB Compass and got the same error, which showed the problem was outside the app.</li>
+        <li><strong>Finding the cause:</strong> In MongoDB Atlas, the free-tier cluster had been paused after a period of inactivity. I resumed it, checked the network access rules, confirmed the connection in Compass, and redeployed.</li>
+        <li><strong>Build vs. runtime errors:</strong> I learned to read deployment logs in order and tell the difference between a build failure and an app that crashes after starting.</li>
+        <li><strong>Free-tier limits:</strong> Free databases and hosting pause or sleep when unused, so a live demo needs occasional checks.</li>
+      </ul>
+
+      <div class="result-section">
+        <h2>Result</h2>
+        <p>
+          The blog is live on Render and connected to MongoDB Atlas. The project gave me hands-on
+          experience with the full path of a web request, from route to database to rendered page,
+          and with troubleshooting a real deployment problem step by step.
+          Note: it runs on a free plan, so the first load may take up to a minute.
+        </p>
+
+        <!-- Replace with your own screenshots -->
+        <div class="result-gallery">
+          <img src="assets/MongoDB-Atlas.webp" alt="Live blog site on Render">
+          <img src="assets/blog4.jpg" alt="Successful deploy log on Render">
+        </div>
+      </div>
+
+      <div class="back-div">
+        <a href="index.html"><span><img src="assets/arrow-left.png" alt=""></span>Previous Project</a>
+        <a href="index.html">Next Project <span><img src="assets/arrow-right.png" alt=""></span></a>
+      </div>
+
+    </div>
+
+  </div>
+
+</body>
+</html>
